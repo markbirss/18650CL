@@ -1,10 +1,12 @@
 #include <Pangodream_18650_CL.h>
 
-//#define ADC_PIN 34
-//#define CONV_FACTOR 1.7
-//#define READS 20
+#define ADC_PIN 3  //IO3 Lilin WEMOS PRO S3 ESP32-S3
+#define CONV_FACTOR 1.7
+#define READS 20
 
-Pangodream_18650_CL BL;
+
+Pangodream_18650_CL BL(ADC_PIN, CONV_FACTOR, READS);
+
 /**
  * If you need to change default values you can use it as
  * Pangodream_18650_CL BL(ADC_PIN, CONV_FACTOR, READS);
